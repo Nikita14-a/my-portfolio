@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightslategray;
+        }
+
+        aside {
+            width: 400px;
+            height: 100%;
+            position: fixed;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+
+        aside img {
+            width: 100%;
+            height: 250px;
+        }
+
+        aside h2 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        aside p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        aside a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 10px 0;
+        }
+
+        aside a:hover {
+            background-color: lightgray;
+            color: royalblue;
+        }
+
+        aside i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .contanier{
+            margin-left: 400px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .child {
+            padding: 20px;
+            background-color: lightgray;
+        }
+        .child-button{
+            height: 40px;
+        }
+
+        .child1 {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            width: 40px;
+            gap: 40px;
+        }
+
+        .child1 img {
+            width: 300px;
+            height: 400px;
+        }
+
+        .about {
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        .skills {
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 40px;
+            background-color: blue;
+            margin-bottom: 10px;
+            padding-right: 20px;
+        }
+
+        .skill-fill {
+            background-color: brown;
+            height: 40px;
+        }
+
+        .skill-bar span {
+            text-align: center;
+        }
+
+        button {
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+            margin-left: 10px;
+
+        }
+        .packages2 {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+            font-size: 20px;
+            height: 500px;
+        }
+        .packages2 div {
+            padding: 5px;
+            width: 100%;
+            text-align: center;
+            background-color: rgb(235, 232, 232);
+        }
+        .basic h3 {
+            background-color: rgb(241, 6, 6);
+            height: 50px;
+            color: white;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .pro h3 {
+            background-color: grey;
+            height: 50px;
+            color: white;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .basic p{
+            height: 60px;
+        }
+        .pro p{
+            height: 60px;
+        }
+        .packages2 button{
+            background-color: rgb(14, 164, 233);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .packages2 button:hover {
+            background-color: black;
+            color: white;
+        }
+        .contact-line {
+            width: 60px;
+            height: 10px;
+            background-color: rgb(241, 6, 6);
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact form button {
+            background-color: rgb(241, 6, 6);
+            color: white;
+            border: none;
+            padding: 20px 20px;
+            cursor: pointer;
+            width: 50%;
+        }
+        .contact form button:hover {
+            background-color: black;
+            color: white;
+        }
+        .map img{
+            height: 300px;
+            width: 100%;
+        }
+        footer{
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            color: white;
+        }
+
+        /* Responsive Design for Tablets and Smaller Screens */
+        @media screen and (max-width: 1024px) {
+            aside {
+                width: 300px;
+            }
+
+            .contanier {
+                margin-left: 300px;
+            }
+
+            .child1 {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .child1 img {
+                width: 100%;
+                height: auto;
+            }
+
+            .packages2 {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .packages2 div {
+                width: 100%;
+            }
+        }
+
+        /* Responsive Design for Mobile Devices */
+        @media screen and (max-width: 768px) {
+            aside {
+                width: 100%;
+                height: auto;
+                position: static;
+                padding: 15px;
+            }
+
+            aside img {
+                height: 200px;
+            }
+
+            aside h2 {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            aside p {
+                font-size: 12px;
+            }
+
+            aside a {
+                padding: 8px 0;
+                font-size: 14px;
+            }
+
+            aside i {
+                font-size: 18px;
+                margin-right: 8px;
+            }
+
+            .contanier {
+                margin-left: 0;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .child {
+                padding: 15px;
+            }
+
+            .child h1 {
+                font-size: 20px;
+            }
+
+            .child p {
+                font-size: 14px;
+            }
+
+            .child1 {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+                width: 100%;
+            }
+
+            .child1 img {
+                width: 100%;
+                height: auto;
+            }
+
+            .about {
+                padding: 15px;
+            }
+
+            .about h2 {
+                font-size: 20px;
+            }
+
+            .about p {
+                font-size: 13px;
+            }
+
+            .skills {
+                padding: 15px;
+            }
+
+            .skill-bar {
+                height: 30px;
+                margin-bottom: 8px;
+            }
+
+            .skill-fill {
+                height: 30px;
+                font-size: 12px;
+            }
+
+            button {
+                width: 100%;
+                height: 38px;
+                font-size: 14px;
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .packages2 {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+                height: auto;
+                font-size: 16px;
+            }
+
+            .packages2 div {
+                padding: 10px;
+                width: 100%;
+            }
+
+            .basic h3,
+            .pro h3 {
+                height: 40px;
+                font-size: 18px;
+                padding: 5px 0;
+            }
+
+            .basic p,
+            .pro p {
+                height: auto;
+                font-size: 12px;
+            }
+
+            .contact {
+                padding: 15px;
+            }
+
+            .contact h2 {
+                font-size: 20px;
+            }
+
+            .contact p {
+                font-size: 13px;
+            }
+
+            .contact form input,
+            .contact form textarea {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .contact form button {
+                width: 100%;
+                padding: 15px 10px;
+                font-size: 14px;
+            }
+
+            .map img {
+                height: 200px;
+            }
+
+            footer {
+                height: 40px;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                padding: 0 10px;
+            }
+
+            footer p {
+                margin: 0;
+            }
+        }
+
+        /* Extra Small Devices (Phones) */
+        @media screen and (max-width: 480px) {
+            aside {
+                padding: 10px;
+            }
+
+            aside img {
+                height: 150px;
+            }
+
+            aside h2 {
+                font-size: 18px;
+            }
+
+            aside a {
+                padding: 6px 0;
+                font-size: 12px;
+            }
+
+            aside i {
+                font-size: 16px;
+                margin-right: 6px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .child {
+                padding: 10px;
+            }
+
+            .child h1 {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            .child p {
+                font-size: 12px;
+            }
+
+            .child1 {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .about {
+                padding: 10px;
+            }
+
+            .about h2 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .about p {
+                font-size: 12px;
+            }
+
+            .skill-bar {
+                height: 25px;
+                margin-bottom: 5px;
+            }
+
+            .skill-fill {
+                height: 25px;
+                font-size: 10px;
+            }
+
+            button {
+                height: 35px;
+                font-size: 12px;
+            }
+
+            .packages2 {
+                gap: 10px;
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .packages2 div {
+                padding: 8px;
+            }
+
+            .basic h3,
+            .pro h3 {
+                height: 35px;
+                font-size: 16px;
+                padding: 3px 0;
+            }
+
+            .basic p,
+            .pro p {
+                font-size: 11px;
+            }
+
+            .contact {
+                padding: 10px;
+            }
+
+            .contact h2 {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+
+            .contact p {
+                font-size: 12px;
+            }
+
+            .contact-line {
+                width: 50px;
+                height: 8px;
+            }
+
+            .contact form input,
+            .contact form textarea {
+                padding: 6px;
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+
+            .contact form button {
+                padding: 12px 8px;
+                font-size: 12px;
+            }
+
+            .map img {
+                height: 150px;
+            }
+
+            footer {
+                height: 35px;
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside>
+        <img src="WhatsApp Image 2026-06-30 at 3.14.15 AM (1).jpeg" alt="">
+        <h2>Portfolio</h2>
+        <p>Template by stanley</p>
+        <a href=""> <i class="fa fa-folder"></i> PORTFOLIO</a>
+        <a href=""> <i class="fa fa-user"></i> ABOUT</a>
+        <a href=""> <i class="fa fa-envelope"></i> CONTACT</a>
+        <i class="fa fa-facebook-official"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-youtube"></i>
+        <i class="fa fa-pinterest-p"></i>
+        <i class="fa fa-linkedin"></i>
+    </aside>
+    <div class="contanier">
+        <h1>My Portfolio</h1>
+        <div class="child">
+            <h1>stanley morgan</h1>
+            <p>Web Developer and Designer</p><br>
+            <button>Download Resume</button>
+        </div>
+        <div class="child1">
+            <div>
+                <img src="WhatsApp Image 2026-06-30 at 3.14.15 AM (1).jpeg" alt="My Image">
+
+            </div>
+            <div>
+                <img src="WhatsApp Image 2026-06-30 at 3.14.15 AM (1).jpeg" alt="My Image">
+
+            </div>
+
+        </div>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of
+                lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus
+                ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                congue gravida diam non fringilla.</p>
+        </div>
+        
+            <h2>Technical Skills</h2>
+            <p>Photography</p><br>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 80%;"><span>80%</span></div>
+            </div>
+            <p>Web Design</p><br>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 90%;"><span>90%</span></div>
+            </div>
+            <p>Photoshop</p><br>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 75%;"><span>75%</span></div>
+            </div><br>
+            <button>download resume</button>
+             <div class="packages2">
+        <div class="basic">
+            <h3>Basic</h3>
+            <p>Web Design</p>
+            <hr>
+            <p>Photography</p>
+            <hr>
+            <p>1GB Storage</p>
+            <hr>
+            <p>Mail Support</p>
+            <hr>
+            <h4>$10</h4>
+            <p>per mouth</p>
+            <hr>
+            <button>Sign Up</button>
+        </div>
+        <div class="pro">
+            <h3>Pro</h3>
+            <p>Web Design</p>
+            <hr>
+            <p>Photography</p>
+            <hr>
+            <p>10GB Storage</p>
+            <hr>
+            <p>Endless Support</p>
+            <hr>
+            <h4>$20</h4>
+            <p>per mouth</p>
+            <hr>
+            <button>Sign Up</button><br>
+        </div>
+        </div>
+         <div class="contact">
+        <h2 id="contact">Contact.</h2>
+        <div class="contact-line"></div>
+        <p>Do you want us to style your home? Fill out the form and fill me in with the details:)  We love meeting new people!</p>
+        <form>
+            <div>
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" id="Name" name="Name" placeholder="Name" required>
+            </div><br>
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div><br>
+            <div>
+                <label for="message" class="form-label">Message</label>
+                <input type="text" id="message" name="message" placeholder="Message" required>
+            </div><br>
+            <button>SEND MESSAGE</button>
+        </form>
+      </div> <br><br><br>
+        <div class="map">
+            <img src="map.jpg" alt="">
+        </div> 
+       <footer>
+        <p>powered by stanley morgan</p>
+       </footer>
+      
+    
+    </div>
+</body>
+
+</html>
